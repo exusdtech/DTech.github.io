@@ -1,0 +1,122 @@
+body {
+    font-family: 'Arial', sans-serif;
+    /* Updated font family */
+    background-color: #1A1A1D;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header {
+    background-color:  #ffc107;;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6600;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff6600;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center; /* Center align items in mobile mode */
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        justify-content: center;
+        flex-direction: column; /* Display navigation links vertically */
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+}
+
+section#home {
+    background-color: #1A1A1D;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1A1A1D;
+}
+
+#dynamicHeadline {
+    margin: 0;
+   color: #ffffff;
+    font-size: 45px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 1rem;
+    }
+
+    #dynamicHeadline {
+        font-size: 1.2rem;
+    }
+}
+
+#ona video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover; /* Ensures the video covers the entire container */
+}
+
+@media (max-width: 768px) {
+    #ona video {
+        height: auto; /* Responsive height for smaller screens */
+        max-width: 100%;
+        width: 100%;
+    }
+}

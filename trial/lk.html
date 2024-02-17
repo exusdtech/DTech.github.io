@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #1A1A1D;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #popo h2 {
+    margin-bottom: 1px;
+    color: #ffc400;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+
+/* Styles for video container on the right */
+.video-container {
+    float: right;
+}
+
+/* Styles for video container-9x16 on the left */
+.video-container-9x16 {
+    float: left;
+}
+
+/* Container for all video containers */
+.video-container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #1A1A1D;
+    padding: 10px;
+}
+
+/* Adjust styles for smaller screens */
+@media only screen and (max-width: 767px) {
+    .video-container {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .video-container-9x16 {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .video-container.playing {
+        background-color: #1A1A1D;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 45vw;
+    height: 25.31vw;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.video-container.playing {
+    background-color: #1A1A1D;
+}
+
+.video-container-9x16 {
+    width: 22.5vw;
+    height: 40vw;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.video-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin: 0;
+}
+</style>
+<section id="popo">
+
+</section>
+<section>
+    <section id="portfolio">
+        <div class="video-container-wrapper">
+            <div class="video-container" onclick="togglePlayPause('TRUST')">
+                <video id="TRUST" loop>
+                    <source src="TRUST.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container video-container-9x16" onclick="togglePlayPause('fianl podcast')">
+                <video id="fianl podcast" loop>
+                    <source src="fianl podcast.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-container" onclick="togglePlayPause('FINAL 4 SAMPLE')">
+                <video id="FINAL 4 SAMPLE" loop>
+                    <source src="FINAL 4 SAMPLE.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container video-container-9x16" onclick="togglePlayPause('Video8')">
+                <video id="Video8" loop>
+                    <source src="Video8.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-container" onclick="togglePlayPause('1127 (3)(1)')">
+                <video id="1127 (3)(1)" loop>
+                    <source src="1127 (3)(1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container video-container-9x16" onclick="togglePlayPause('Raw Sample')">
+                <video id="Raw Sample" loop>
+                    <source src="Raw Sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container" onclick="togglePlayPause('sample ')">
+                <video id="sample " loop>
+                    <source src="sample .mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container video-container-9x16" onclick="togglePlayPause('watch final 2')">
+                <video id="watch final 2" loop>
+                    <source src="watch final 2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container" onclick="togglePlayPause('nextgen')">
+                <video id="nextgen" loop>
+                    <source src="nextgen.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container video-container-9x16" onclick="togglePlayPause('skin')">
+                <video id="skin" loop>
+                    <source src="skin.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+         
+            <div class="video-container" onclick="togglePlayPause('logo animation')">
+                <video id="logo animation" loop>
+                    <source src="logo animation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container video-container-9x16" onclick="togglePlayPause('FINAL')">
+                <video id="FINAL" loop>
+                    <source src="FINAL.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container" onclick="togglePlayPause('yash sample')">
+                <video id="yash sample" loop>
+                    <source src="yash sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+    
+            <div class="video-container video-container-9x16" onclick="togglePlayPause('baarbie')">
+                <video id="baarbie" loop>
+                    <source src="baarbie.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container"
+            onclick="togglePlayPause('MAAGNET VO(fast version) with bg music v3 final 2')">
+            <video id="MAAGNET VO(fast version) with bg music v3 final 2" loop>
+                <source src="MAAGNET VO(fast version) with bg music v3 final 2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-container video-container-9x16" onclick="togglePlayPause('ltdg')">
+            <video id="ltdg" loop>
+                <source src="ltdg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+                <div class="overlay-text">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container" onclick="togglePlayPause('1')">
+        <video id="1" loop>
+            <source src="1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <div class="overlay-text">
+                <h2></h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container video-container-9x16" onclick="togglePlayPause('coaches')">
+        <video id="coaches.mp4" loop>
+            <source src="coaches.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <div class="overlay-text">
+                <h2></h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container" onclick="togglePlayPause('carstream-1080p-230715')">
+        <video id="carstream-1080p-230715" loop>
+            <source src="carstream-1080p-230715.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <div class="overlay-text">
+                <h2></h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container video-container-9x16" onclick="togglePlayPause('REEL3')">
+        <video id="REEL3.mp4" loop>
+            <source src="REEL3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <div class="overlay-text">
+                <h2></h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="video-container" onclick="togglePlayPause('Sample 1')">
+        <video id="Sample 1" loop>
+            <source src="Sample 1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <div class="overlay-text">
+                <h2></h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="video-container video-container-9x16" onclick="togglePlayPause('final canada reel')">
+        <video id="final canada reel.mp4" loop>
+            <source src="final canada reel.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <div class="overlay-text">
+                <h2></h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="video-container" onclick="togglePlayPause('cinematic camera shots')">
+        <video id="cinematic camera shots" loop>
+            <source src="cinematic camera shots.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <div class="overlay-text">
+                <h2></h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="video-container video-container-9x16"
+    onclick="togglePlayPause('WhatsApp Video 2024-01-15 at 13.39.01_8b74aec1')">
+    <video id="WhatsApp Video 2024-01-15 at 13.39.01_8b74aec1" loop>
+        <source src="WhatsApp Video 2024-01-15 at 13.39.01_8b74aec1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+        <div class="overlay-text">
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>
+</div>
+   
+    <div class="video-container" onclick="togglePlayPause('Sigma_Earth_CSR')">
+        <video id="Sigma_Earth_CSR" loop>
+            <source src="Sigma_Earth_CSR.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <div class="overlay-text">
+                <h2></h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+  
+<div class="video-container" onclick="togglePlayPause('practice English')">
+    <video id="practice English" loop>
+        <source src="practice English.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+        <div class="overlay-text">
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>
+</div>
+<video id="Sequence 01_1" loop>
+    <source src="Sequence 01_1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<div class="overlay">
+    <div class="overlay-text">
+        <h2></h2>
+        <p></p>
+    </div>
+</div>
+</div>
+
+<div class="video-container" onclick="togglePlayPause('VID20230729111202[2]_1 fd')">
+    <video id="VID20230729111202[2]_1 fd" loop>
+        <source src="VID20230729111202[2]_1 fd.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+        <div class="overlay-text">
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>
+</div>
+<div class="video-container video-container-9x16" onclick="togglePlayPause('Sequence 01_1')">
+    <video id="Sequence 01_1" loop>
+        <source src="Sequence 01_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+        <div class="overlay-text">
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>
+</div>
+
+
+        <script>
+            window.addEventListener('error', function (e) {
+                console.error('Error:', e);
+            });
+        </script>
+
+        <script>
+            function togglePlayPause(videoId) {
+                var video = document.getElementById(videoId);
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            }
+            // Add your JavaScript functions here, such as togglePlayPause
+            function togglePlayPause(videoId) {
+                var video = document.getElementById(videoId);
+                var container = video.closest('.video-container');
+
+                if (video.paused) {
+                    video.play();
+                    container.classList.add('playing');
+                } else {
+                    video.pause();
+                    container.classList.remove('playing');
+                }
+            }
+        </script>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <span>This is</span> <span>on the same</span> <span>line.</span>
